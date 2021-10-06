@@ -21,6 +21,7 @@ function SuperHeroTable(props) {
                     </tr>
                 )}
             </table>
+            <br />
         </div>
      );
 }
