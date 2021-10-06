@@ -13,6 +13,7 @@ class App extends Component {
             firstName: 'N.',
             lastName: 'Hawkins',
             names: ['Mike', 'Nevin', 'Aaron', 'Tory', 'Kelly'],
+            tableHeads:['ID', 'Name', 'Primary Ability', 'Secondary Ability'],
             superheroes:[
                 {
                     superheroId: 1,
@@ -45,7 +46,7 @@ class App extends Component {
             <div className="container-fluid">
                 <DisplayName firstName={this.state.firstName} lastName={this.state.lastName} />
                 <NamesList names={this.state.names} />
-                <SuperHeroTable superHeroes={this.state.superheroes} />
+                <SuperHeroTable superHeroes={this.state.superheroes} headers={this.state.tableHeads} />
                 <AlertUser alert={this.alertMessage} />
             </div>
           );

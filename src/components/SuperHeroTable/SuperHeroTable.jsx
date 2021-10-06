@@ -8,7 +8,9 @@ function SuperHeroTable(props) {
             <h2>Superheroes Table</h2>
             <table>
                 <tr>
-                    
+                    {props.headers.map((header) =>
+                        <th>{header}</th>
+                    )}
                 </tr>
                 {props.superHeroes.map((superhero) =>
                     <tr>
