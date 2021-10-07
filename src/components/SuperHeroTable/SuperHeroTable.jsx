@@ -7,19 +7,23 @@ function SuperHeroTable(props) {
         <div>
             <h2>Superheroes Table</h2>
             <table>
+                <thead>
                 <tr>
                     {props.headers.map((header) =>
                         <th>{header}</th>
                     )}
                 </tr>
-                {props.superHeroes.map((superhero) =>
-                    <tr>
-                        <td>{superhero.superheroId}</td>
-                        <td>{superhero.name}</td>
-                        <td>{superhero.primaryAbility}</td>
-                        <td>{superhero.secondaryAbility}</td>
-                    </tr>
-                )}
+                </thead>
+                <tbody>
+                    {props.superHeroes.map((superhero) =>
+                        <tr>
+                            <td>{superhero.superheroId}</td>
+                            <td>{superhero.name}</td>
+                            <td>{superhero.primaryAbility}</td>
+                            <td>{superhero.secondaryAbility}</td>
+                        </tr>
+                    )}
+                </tbody>
             </table>
             <br />
         </div>
